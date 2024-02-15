@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            /* display: flex; */
+            background-color: aquamarine;
+            /* justify-content: center; */
+        }
+
+        h1 {
+            /* // display: inline-block; */
+            padding-left: 589px;
+            padding-top: 56px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 46px;
+            margin-left: 500px;
+            width: 30vw;
+            height: 37.5vh;
+            background-color: rgb(48, 46, 46);
+        }
+
+        #fname {
+            text-align: center;
+            border: 4px solid rgb(19, 29, 227);
+            width: 452px;
+            padding-top: 11px;
+            padding-bottom: 5px
+        }
+
+        .container .box {
+            /* display: flex;
+            flex-wrap: wrap;
+            align-content: space-between; */
+            height: 247px;
+            margin-top: -6px;
+            border: 4px solid red;
+        }
+
+        .f1 {
+            padding-top: 5px;
+            height: 45px;
+            width: 449px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .f1 button {
+
+            height: 43px;
+            width: 150px;
+        }
+
+        .f2 {
+            /* padding-top: 10px; */
+            height: 45px;
+            width: 449px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .f2 button {
+
+            height: 43px;
+            width: 150px;
+        }
+
+        .f3 {
+            /* padding-top: 10px; */
+            height: 45px;
+            width: 449px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .f3 button {
+
+            height: 43px;
+            width: 150px;
+        }
+
+        .f4 {
+            /* padding-top: 10px; */
+            height: 45px;
+            width: 449px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .f4 button {
+
+            height: 43px;
+            width: 150px;
+        }
+
+        .f5 {
+            /* padding-top: 10px; */
+            height: 45px;
+            width: 449px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .f5 button {
+            height: 43px;
+            width: 150px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CAlCULATOR</h1>
+    <div class="container">
+        <input type="text" id="fname" name="fname" placeholder="Enter the number"
+            width="100px">
+        <div class="box">
+            <div class="f1">
+                <button onclick="fun1(1)">1</button>
+                <button onclick="fun1(2)">2</button>
+                <button onclick="fun1(3)">3</button>
+            </div>
+            <div class="f2"><button onclick="fun1(4)">4</button>
+                <button onclick="fun1(5)">5</button>
+                <button onclick="fun1(6)">6</button>
+            </div>
+            <div class="f3">
+                <button onclick="fun1(7)">7</button>
+                <button onclick="fun1(8)">8</button>
+                <button onclick="fun1(9)">9</button>
+            </div>
+            <div class="f4">
+                <button onclick="fun1('+')">+</button>
+                <button onclick="fun1('-')">-</button>
+                <button onclick="fun1('*')">*</button>
+            </div>
+            <div class="f5">
+                <button onclick="fun1('/')">/</button>
+                <button onclick="fun1('^')">^</button>
+                <button onclick="Eval()">=</button>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        function fun1(num) {
+            document.getElementById("fname").value += num;
+        }
+        function Eval() {
+            var temp = document.getElementById("fname");
+            var result = eval(temp.value);
+            document.getElementById("fname").value =result;
+        }
+    </script>
+</body>
+
+</html>
